@@ -1,4 +1,5 @@
 const jwt = require('jsonwebtoken');
+const dotenv = require('dotenv').config();
 
 const authMid = (req , res , next) => {
     let token = req.header('x-auth-token');

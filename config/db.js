@@ -5,7 +5,7 @@ const connectionString = process.env.MONGO_SRV;
 const mongoConnect = () => {
     mongoose.connect(connectionString , {
         useCreateIndex: true,
-        useFindAndModify: true,
+        useFindAndModify: false,
         useNewUrlParser: true,
         useUnifiedTopology: true
     }).then(res => {

@@ -5,7 +5,6 @@ const bcrypt = require('bcrypt');
 const mongooose = require('mongoose');
 const User = require('../modals/User');
 const jwt = require('jsonwebtoken');
-const dotenv = require('dotenv').config();
 
 route.post('/' , async(req , res) => {
     try {

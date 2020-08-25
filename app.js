@@ -11,7 +11,7 @@ app.use(express.json());
 //db connection
 mongoDB();
 //login signup
-app.use('/api/users/', users); 
+app.use('/api/user/', users); 
 app.use('/api/auth/', auth);  
 
 //choose an option (create a group / join an existing group )

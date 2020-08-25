@@ -10,6 +10,14 @@ const userSchema = new mongoose.Schema({
     },
     password: {
         type: String,
+    },
+    groupId: {
+        type: mongoose.Schema.Types.ObjectId,
+        default: null
+    },
+    isGroupAdmin: {
+        type: Boolean,
+        default: false
     }
 });
 
