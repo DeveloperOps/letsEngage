@@ -15,7 +15,7 @@ const groupSchema = new mongoose.Schema({
             type: mongoose.Schema.Types.ObjectId,
         }],
     groupMsgs: [{
-        type: String
+        type: mongoose.Schema.Types.ObjectId,
     }]
 });
 

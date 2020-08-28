@@ -74,4 +74,5 @@ route.get('/' , authmiddleware ,async(req , res) => {
         return res.status(400).send({error: "server issue!!"});
     }
 });
+
 module.exports = route; 

@@ -5,20 +5,18 @@ const mongoDB = require('./config/db');
 //routes
 const users = require('./apis/users'); 
 const auth = require('./apis/auth'); 
+const groups = require('./apis/groups'); 
+const messages = require('./apis/messages')
 
 app.use(express.json());
-
 //db connection
 mongoDB();
 //login signup
 app.use('/api/user/', users); 
 app.use('/api/auth/', auth);  
+app.use('/api/groups', groups);
+app.use('/api/message' , messages);
 
-//choose an option (create a group / join an existing group )
-
-//create a group (--->) {req.body} groupname: new Group Name , created-by: userid , date: date , platform: instagram , twitter etc. 
-
-//mygroup if(created)- if(joined)
 app.listen(4000 , () => {
     console.log('server running ' + 4000);
 })
